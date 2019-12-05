@@ -23,7 +23,7 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (!appSettings.getString("usernameIpsosApp")) {
+    if (!appSettings.getString("emailIpsosApp")) {
       this.router.navigate(["login"]);
       return false;
     } else {

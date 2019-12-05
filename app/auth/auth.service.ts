@@ -1,13 +1,15 @@
 import { Injectable } from "@angular/core";
-import { ReqService } from "../request/req.service";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root"
 })
 export class AuthService {
-  constructor(private requestsService: ReqService) {}
+  apiLink: string = "https://capi.ipsos.rs/client/mobile_app/";
 
-  login(email: string, pass: string) {
-    this.requestsService.post("login.php", { email: email, password: pass });
+  constructor(private http: HttpClient) {}
+
+  login(link: string, data: object) {
+    return this.http.post(this.apiLink + link, data);
   }
 }
