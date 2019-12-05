@@ -1,1 +1,11 @@
-<Button text="login works!" class="btn btn-primary"></Button>
+<FlexboxLayout class="page">
+    <StackLayout orientation="vertical" [formGroup]="loginForm" width="100%" height="100%">
+        <Image class="logo" width="100%" height="30%" src="~/image/logo.png"></Image>
+        <TextField [(ngModel)]="email" keyboardType="email" width="80%" hint="E-Mail..."></TextField>
+        <TextField [(ngModel)]="password" secure="true" width="80%" hint="Password..."></TextField>
+        <Button *ngIf="!loginProcessing" type="submit" name="submit" width="80%" text="Prijavi se"
+            (tap)="login()"></Button>
+        <app-loader></app-loader>
+        <Label class="footer" text="Ipsos 2019"></Label>
+    </StackLayout>
+</FlexboxLayout>
