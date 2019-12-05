@@ -3,7 +3,10 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "version": "0.0.0",
   "nativescript": {
-    "id": "org.nativescript.ipsosapp"
+    "id": "org.nativescript.ipsosapp",
+    "tns-android": {
+      "version": "6.2.0"
+    }
   },
   "dependencies": {
     "@angular/animations": "~8.2.0",

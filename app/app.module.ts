@@ -1,9 +1,12 @@
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
-import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
+import { AppRoutingModule } from "./app-routing.module";
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { LandingComponent } from './home/landing/landing.component';
+import { StatsComponent } from './home/stats/stats.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -12,16 +15,9 @@ import { HomeComponent } from './home/home.component';
 // import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      HomeComponent,
-  ],
-  imports: [
-      NativeScriptModule,
-      AppRoutingModule,
-  ],
+  declarations: [AppComponent, HomeComponent, LoginComponent, LandingComponent, StatsComponent],
+  imports: [NativeScriptModule, AppRoutingModule],
   bootstrap: [AppComponent],
-  schemas: [NO_ERRORS_SCHEMA],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule {}
-
