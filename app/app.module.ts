@@ -14,6 +14,7 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
+import { SurveyComponent } from './shared/survey/survey.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -28,7 +29,8 @@ import { CommonModule } from "@angular/common";
     LoginComponent,
     LandingComponent,
     StatsComponent,
-    LoaderComponent
+    LoaderComponent,
+    SurveyComponent
   ],
   imports: [
     NativeScriptModule,

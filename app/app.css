@@ -1,2 +1,5 @@
- 
-@import '~nativescript-theme-core/css/core.light.css';
+@import "~nativescript-theme-core/css/core.light.css";
+
+.action-label {
+  margin-left: 10;
+}

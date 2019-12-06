@@ -1,8 +1,11 @@
-<!-- <Button text="Posle svake kafe" class="btn btn-primary"></Button>
-<Button text="Dnevna anketa" class="btn btn-primary"></Button>
-<Button text="LOGIN" [nsRouterLink]="['/login']" class="btn btn-primary"></Button> -->
-
-<!-- <WebView row="1" height="100%" width="100%" [src]="webViewSrc"></WebView> -->
-<Button tap="promeni()" text="klik"></Button>
-<Button text="klikKKKK"></Button>
-<Span text="MMMM"></Span>
+<FlexboxLayout flexDirection="column" justifyContent="space-around">
+    <StackLayout height="20%">
+        <Image width="100%" src="~/assets/coffee.png"></Image>
+    </StackLayout>
+    <StackLayout class="landing_content" alignSelf="center">
+        <HtmlView [html]="htmlString"></HtmlView>
+    </StackLayout>
+    <StackLayout>
+        <Button class="btn btn-primary" text="POSLE SVAKE KAFE" (tap)="radiAnketu('multiPerDay')"></Button>
+    </StackLayout>
+</FlexboxLayout>

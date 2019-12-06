@@ -1,1 +1,0 @@
-tns build android --release --key-store-path="C:\Users\Milan Djordjevic\Desktop\ipsos.p12" --key-store-password=ipsos2019 --key-store-alias=ipsos --key-store-alias-password=ipsos2019
