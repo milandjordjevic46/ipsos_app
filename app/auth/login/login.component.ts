@@ -3,6 +3,7 @@ import { AuthService } from "../auth.service";
 import * as appSettings from "application-settings";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-login",
@@ -12,16 +13,18 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   progressLogin: Boolean;
-
+  public language: string;
   constructor(
     private authService: AuthService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private translate: TranslateService
   ) {
     this.loginForm = this.formBuilder.group({
       email: [null, Validators.required],
       password: [null, Validators.required]
     });
+    // this.translate.setDefaultLang("en");
   }
   ngOnInit() {
     // this.loginForm.value.email = appSettings.getString("emailIpsosApp") || null;
