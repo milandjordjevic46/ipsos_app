@@ -14,13 +14,25 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { SurveyComponent } from './shared/survey/survey.component';
+import { SurveyComponent } from "./shared/survey/survey.component";
+
+// import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
+import { Http } from "@angular/http";
+import {
+  TranslateModule,
+  TranslateLoader,
+  TranslateStaticLoader
+} from "ng2-translate";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
 // Uncomment and add to NgModule imports  if you need to use the HTTP wrapper
 // import { NativeScriptHttpClientModule } from 'nativescript-angular/http-client';
+
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, "/i18n", ".json");
+}
 
 @NgModule({
   declarations: [
@@ -38,7 +50,13 @@ import { SurveyComponent } from './shared/survey/survey.component';
     FormsModule,
     ReactiveFormsModule,
     NativeScriptFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NativeScriptHttpClientModule,
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: createTranslateLoader,
+      deps: [Http]
+    })
   ],
   bootstrap: [AppComponent],
   // providers: [MainService, RequestsService, AuthService],
