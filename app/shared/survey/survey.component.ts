@@ -1,6 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 import * as appSettings from "application-settings";
 import { ActivatedRoute } from "@angular/router";
+import { WebView, LoadEventData } from "ui/web-view";
 
 @Component({
   selector: "app-survey",
@@ -8,6 +9,7 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./survey.component.css"]
 })
 export class SurveyComponent implements OnInit {
+  @ViewChild("myDiv", { static: true }) webview: ElementRef;
   webViewSrc: string;
 
   constructor(private route: ActivatedRoute) {
@@ -15,6 +17,13 @@ export class SurveyComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log("radi");
+    // if (this.webview.nativeElement.android) {
+    //   this.webview.nativeElement.android
+    //     .getSettings()
+    //     .setDisplayZoomControls(false);
+    //   this.webview.nativeElement.android
+    //     .getSettings()
+    //     .setBuiltInZoomControls(true);
+    // }
   }
 }

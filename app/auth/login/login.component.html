@@ -6,7 +6,9 @@
     </StackLayout>
 </ActionBar>
 <FlexboxLayout flexDirection="column" height="100%" justifyContent="space-around">
-
+    <StackLayout>
+        <Label text="{{ 'hello' | L: 'hello' }}"></Label>
+    </StackLayout>
     <StackLayout orientation="vertical" [formGroup]="loginForm" width="100%" height="95%">
         <Image class="logo" width="100%" height="50%" src="~/assets/ipsos_logo.png"></Image>
         <TextField formControlName="email" class='fieldLine' keyboardType="email" width="80%" hint="E-Mail...">
@@ -17,6 +19,6 @@
         <app-loader *ngIf="progressLogin"></app-loader>
     </StackLayout>
     <StackLayout class="bottom_text" height="5%">
-        <Label class="footer" text="Ipsos 2019"></Label>
+        <Label class="footer" text="Ipsos 201"></Label>
     </StackLayout>
 </FlexboxLayout>

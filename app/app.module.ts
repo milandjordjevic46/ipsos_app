@@ -14,7 +14,8 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
-import { SurveyComponent } from './shared/survey/survey.component';
+import { SurveyComponent } from "./shared/survey/survey.component";
+import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -38,7 +39,8 @@ import { SurveyComponent } from './shared/survey/survey.component';
     FormsModule,
     ReactiveFormsModule,
     NativeScriptFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NativeScriptLocalizeModule
   ],
   bootstrap: [AppComponent],
   // providers: [MainService, RequestsService, AuthService],

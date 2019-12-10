@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "308528256009",
+    "firebase_url": "https://ipsos-app.firebaseio.com",
+    "project_id": "ipsos-app",
+    "storage_bucket": "ipsos-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308528256009:android:4d2971f2c0967ec24dd4d8",
+        "android_client_info": {
+          "package_name": "org.nativescript.ipsosapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308528256009-hb0vakrqucb6dveihnlhtln7mp057lce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc8g3dEL2THEvyYw0lBAXvIk9HZ89jib4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308528256009-hb0vakrqucb6dveihnlhtln7mp057lce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,10 +5,12 @@
 //	compile 'com.android.support:recyclerview-v7:+'
 //}
 
+
 android {  
   defaultConfig {  
     generatedDensities = []
-    applicationId = "org.nativescript.ipsosapp" 
+    applicationId = "org.nativescript.ipsosapp"
+    multiDexEnabled true
     
     //override supported platforms
     // ndk {
