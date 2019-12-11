@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     firebase
       .init({
         showNotifications: true,
-        showNotificationsWhenInForeground: true,
+        showNotificationsWhenInForeground: false,
         onPushTokenReceivedCallback: token => {
           appSettings.setString("token_tok", token);
           console.log("[Firebase] onPushTokenReceivedCallback:", { token });
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
           console.log("[Firebase] onMessageReceivedCallback:", { message });
           dialogs.alert({
             title: message.title !== undefined ? message.title : "",
-            message: JSON.stringify(message.body),
+            message: message.body,
             okButtonText: "OK!"
           });
         }
