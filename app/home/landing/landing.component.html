@@ -6,6 +6,7 @@
         <HtmlView [html]="htmlString"></HtmlView>
     </StackLayout>
     <StackLayout>
+        <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button>
         <Button class="btn btn-primary" text="POSLE SVAKE KAFE" (tap)="radiAnketu('multiPerDay')"></Button>
     </StackLayout>
 </FlexboxLayout>

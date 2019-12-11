@@ -34,7 +34,8 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     this.progressLogin = true;
-    this.authService.login("appLogin.php", this.loginForm.value).subscribe(
+    const link = "appLogin.php?token=" + appSettings.getString("token_tok");
+    this.authService.login(link, this.loginForm.value).subscribe(
       res => {
         appSettings.setString("emailIpsosApp", this.loginForm.value.email);
         this.router.navigate(["/home"]);

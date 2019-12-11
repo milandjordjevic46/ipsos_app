@@ -1,1 +1,5 @@
-{"appId":"org.nativescript.ipsosapp","minSdkVersion":null,"targetSdkVersion":null}
+{
+  "appId": "org.nativescript.ipsosapp",
+  "minSdkVersion": 19,
+  "targetSdkVersion": null
+}

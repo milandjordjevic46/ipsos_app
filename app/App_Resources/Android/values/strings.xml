@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="login">"ZDravo"</string>
   <string name="hello">"CAO"</string>
   <string name="_app_name_1k3Sbz">"Aplikacija"</string>
   <string name="app_name">"Aplikacija"</string>
