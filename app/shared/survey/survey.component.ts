@@ -17,6 +17,7 @@ export class SurveyComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.route.snapshot.paramMap.get("surveyLink"));
     // if (this.webview.nativeElement.android) {
     //   this.webview.nativeElement.android
     //     .getSettings()

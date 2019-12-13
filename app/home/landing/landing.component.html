@@ -1,12 +1,23 @@
-<FlexboxLayout flexDirection="column" justifyContent="space-around">
-    <StackLayout height="20%">
+<FlexboxLayout flexDirection="column" justifyContent="space-around" style="background: rgb(236,236,236);">
+    <!-- <StackLayout height="20%">
         <Image width="100%" src="~/assets/coffee.png"></Image>
+    </StackLayout> -->
+    <StackLayout height="40%" style="margin-top: 20; margin-bottom: 20">
+        <Image width="100%" [src]="afterImage"></Image>
     </StackLayout>
-    <StackLayout class="landing_content" alignSelf="center">
+
+    <StackLayout height="2" backgroundColor="#dbdbde">
+    </StackLayout>
+
+    <StackLayout height="40%" style="margin-top: 20;">
+        <Image width="100%" [src]="dailyImage"></Image>
+    </StackLayout>
+    <!-- <StackLayout class="landing_content" alignSelf="center">
         <HtmlView [html]="htmlString"></HtmlView>
-    </StackLayout>
-    <StackLayout>
-        <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button>
+    </StackLayout> -->
+    <!-- <StackLayout>
         <Button class="btn btn-primary" text="POSLE SVAKE KAFE" (tap)="radiAnketu('multiPerDay')"></Button>
-    </StackLayout>
+    </StackLayout> -->
+    <Button class="btn btn-primary" [nsRouterLink]="['/lng']" text="LNG"></Button>
+    <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button>
 </FlexboxLayout>

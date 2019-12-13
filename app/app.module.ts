@@ -13,11 +13,11 @@ import { LoaderComponent } from "./shared/loader/loader.component";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FormsModule } from "@angular/forms";
-import { CommonModule } from "@angular/common";
 import { SurveyComponent } from "./shared/survey/survey.component";
 import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
 
 import { WebViewExtModule } from "@nota/nativescript-webview-ext/angular";
+import { LngComponent } from "./shared/lng/lng.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -33,7 +33,8 @@ import { WebViewExtModule } from "@nota/nativescript-webview-ext/angular";
     LandingComponent,
     StatsComponent,
     LoaderComponent,
-    SurveyComponent
+    SurveyComponent,
+    LngComponent
   ],
   imports: [
     NativeScriptModule,

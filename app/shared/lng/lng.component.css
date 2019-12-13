@@ -1,0 +1,13 @@
+/* Add mobile styles for the component here.  */
+.dark_blue {
+  width: 50%;
+  background: #007bff;
+}
+
+.bg_green {
+  background: #007bff;
+}
+
+.bg_blue {
+  background: rgb(48, 188, 255);
+}

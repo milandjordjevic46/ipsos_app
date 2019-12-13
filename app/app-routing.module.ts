@@ -6,9 +6,11 @@ import { HomeComponent } from "./home/home.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { SurveyComponent } from "./shared/survey/survey.component";
+import { LngComponent } from "./shared/lng/lng.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "lng", component: LngComponent },
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
   {

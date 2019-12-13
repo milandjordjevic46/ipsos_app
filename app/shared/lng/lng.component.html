@@ -1,0 +1,22 @@
+<ActionBar title="Ipsos Strategic Marketing" class="action-bar">
+    <StackLayout orientation="horizontal" height="20" ios:horizontalAlignment="center"
+        android:horizontalAlignment="left">
+        <Image src="~/assets/ipsos_logo.png" height="100%" class="action-image"></Image>
+        <Label text="Ipsos Strategic Marketing" class="action-label"></Label>
+    </StackLayout>
+</ActionBar>
+
+
+<FlexboxLayout flexDirection="column" style="margin: 20" justifyContent="space-between">
+    <StackLayout>
+        <HtmlView [html]="htmlString"></HtmlView>
+        <Button class="fas btn-rounded-lg btn-primary m-5" *ngFor='let item of btns'
+            text='{{item.txt}} {{activeLng == item.val ? "&#xf00c;" : ""}}'
+            [ngClass]="{'bg_green': activeLng == item.val, 'bg_blue': activeLng != item.val}"
+            (tap)='chooseLng(item.val)'></Button>
+    </StackLayout>
+    <StackLayout>
+        <Button class="fas btn-rounded-lg btn-primary dark_blue" (tap)="saveAndGo()"
+            text="sacuvaj    &#xf061;"></Button>
+    </StackLayout>
+</FlexboxLayout>
