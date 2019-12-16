@@ -1,23 +1,33 @@
-<FlexboxLayout flexDirection="column" justifyContent="space-around" style="background: rgb(236,236,236);">
-    <!-- <StackLayout height="20%">
-        <Image width="100%" src="~/assets/coffee.png"></Image>
-    </StackLayout> -->
-    <StackLayout height="40%" style="margin-top: 20; margin-bottom: 20">
-        <Image width="100%" [src]="afterImage"></Image>
-    </StackLayout>
+<FlexboxLayout flexDirection="column" justifyContent="space-around">
+
+    <FlexboxLayout justifyContent="space-around" (tap)="radiAnketu('multiPerDay')" height="100"
+        style="margin-top: 20; margin-bottom: 20;">
+        <FlexboxLayout justifyContent="center" flexDirection="column">
+            <Label text="OVo je neki teskt"></Label>
+        </FlexboxLayout>
+        <Image width="100" [src]="afterImage"></Image>
+    </FlexboxLayout>
 
     <StackLayout height="2" backgroundColor="#dbdbde">
     </StackLayout>
 
-    <StackLayout height="40%" style="margin-top: 20;">
-        <Image width="100%" [src]="dailyImage"></Image>
+    <FlexboxLayout justifyContent="space-around" (tap)="radiAnketu('onePerDay')" height="100"
+        style="margin-top: 20; margin-bottom: 20;">
+        <FlexboxLayout justifyContent="center" flexDirection="column">
+            <Label text="OVo je neki teskt"></Label>
+        </FlexboxLayout>
+        <Image width="100" [src]="dailyImage"></Image>
+    </FlexboxLayout>
+
+    <StackLayout height="2" backgroundColor="#dbdbde">
     </StackLayout>
-    <!-- <StackLayout class="landing_content" alignSelf="center">
-        <HtmlView [html]="htmlString"></HtmlView>
-    </StackLayout> -->
-    <!-- <StackLayout>
-        <Button class="btn btn-primary" text="POSLE SVAKE KAFE" (tap)="radiAnketu('multiPerDay')"></Button>
-    </StackLayout> -->
-    <Button class="btn btn-primary" [nsRouterLink]="['/lng']" text="LNG"></Button>
-    <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button>
+
+    <FlexboxLayout justifyContent="space-around" height="100" style="margin-top: 20; margin-bottom: 20;">
+        <FlexboxLayout justifyContent="center" flexDirection="column">
+            <Label text="OVo je neki teskt"></Label>
+        </FlexboxLayout>
+        <Image width="100" src="~/assets/quiz.png"></Image>
+    </FlexboxLayout>
+    <!-- <Button class="btn btn-primary" [nsRouterLink]="['/lng']" text="LNG"></Button>
+    <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button> -->
 </FlexboxLayout>

@@ -1,9 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import * as firebase from "nativescript-plugin-firebase";
 import * as appSettings from "application-settings";
-import { device } from "tns-core-modules/platform/platform";
 const dialogs = require("ui/dialogs");
-import { overrideLocale } from "nativescript-localize/localize";
+
 @Component({
   selector: "app-root",
   template: `
@@ -12,8 +11,6 @@ import { overrideLocale } from "nativescript-localize/localize";
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
-    console.log(device.language, "DL");
-    const localeOverriddenSuccessfully = overrideLocale("sr");
     console.log(appSettings.getString("token_tok"));
     firebase
       .init({
@@ -30,6 +27,7 @@ export class AppComponent implements OnInit {
             message: message.body,
             okButtonText: "OK!"
           });
+          console.log("radi");
         }
       })
       .then(() => {

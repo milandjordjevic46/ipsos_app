@@ -19,6 +19,9 @@ import { NativeScriptLocalizeModule } from "nativescript-localize/angular";
 import { WebViewExtModule } from "@nota/nativescript-webview-ext/angular";
 import { LngComponent } from "./shared/lng/lng.component";
 
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { OptionsComponent } from './shared/options/options.component';
+
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 
@@ -34,7 +37,8 @@ import { LngComponent } from "./shared/lng/lng.component";
     StatsComponent,
     LoaderComponent,
     SurveyComponent,
-    LngComponent
+    LngComponent,
+    OptionsComponent
   ],
   imports: [
     NativeScriptModule,
@@ -44,7 +48,8 @@ import { LngComponent } from "./shared/lng/lng.component";
     NativeScriptFormsModule,
     HttpClientModule,
     NativeScriptLocalizeModule,
-    WebViewExtModule
+    WebViewExtModule,
+    NativeScriptUISideDrawerModule
   ],
   bootstrap: [AppComponent],
   // providers: [MainService, RequestsService, AuthService],

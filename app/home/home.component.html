@@ -6,20 +6,24 @@
       <Label text="Ipsos Strategic Marketing" class="action-label"></Label>
     </StackLayout>
   </ActionBar>
-  <StackLayout>
-    <TabView width="100%">
 
-      <StackLayout *tabItem="{title: 'Home'}">
-        <app-landing></app-landing>
-      </StackLayout>
+  <FlexboxLayout flexDirection="column">
+    <StackLayout>
 
-      <StackLayout *tabItem="{title: 'Statistics'}">
-        <app-stats></app-stats>
-      </StackLayout>
+      <TabView width="100%">
+        <StackLayout *tabItem="{title: 'Survey'}">
+          <app-landing></app-landing>
+        </StackLayout>
 
-    </TabView>
+        <StackLayout *tabItem="{title: 'Statistics'}">
+          <app-stats></app-stats>
+        </StackLayout>
 
-    <Label text="Item Details"></Label>
-    <Button text="goBack()" tap="onTap"></Button>
-  </StackLayout>
+        <StackLayout *tabItem="{title: 'survey Options'}">
+          <app-options></app-options>
+        </StackLayout>
+
+      </TabView>
+    </StackLayout>
+  </FlexboxLayout>
 </Page>
