@@ -1,0 +1,13 @@
+<FlexboxLayout flexDirection="column" justifyContent="space-between">
+
+    <StackLayout class="kartica" [nsRouterLink]="['/lng']" pageTransition="slide">
+        <Label class="fas" text="&#xf0ac;" style="font-size: 100;"></Label>
+        <Label text="Change survey language" style="font-size: 30;"></Label>
+    </StackLayout>
+
+    <StackLayout class="kartica" (tap)="logOut()">
+        <Label class="fas" text="&#xf2f5;" style="font-size: 100;"></Label>
+        <Label text="Logout" style="font-size: 30;"></Label>
+    </StackLayout>
+
+</FlexboxLayout>

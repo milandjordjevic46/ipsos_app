@@ -1,0 +1,10 @@
+.kartica {
+  height: 200;
+  text-align: center;
+  margin: 20;
+  border-radius: 20;
+  color: white;
+  background-color: #17a2b8;
+  border-color: white;
+  border-width: 1;
+}

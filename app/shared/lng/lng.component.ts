@@ -11,6 +11,8 @@ export class LngComponent implements OnInit {
   htmlString: string;
   btns: Object[];
   activeLng: string;
+  view = require("ui/core/view");
+  drawer;
   constructor(private router: Router) {
     this.htmlString = `<h1>Izaberite jezik za prikazivanje anketa</h1>`;
     this.btns = [
@@ -33,4 +35,16 @@ export class LngComponent implements OnInit {
   saveAndGo(): void {
     this.router.navigate(["/home"]);
   }
+
+  pageLoaded = function(args) {
+    debugger;
+    var page = args.object;
+    console.log("argSSSSSS", args);
+    this.drawer = this.view.getViewById(page, "sideDrawer");
+  };
+
+  toggleDrawer = function() {
+    debugger;
+    this.drawer.toggleDrawerState();
+  };
 }
