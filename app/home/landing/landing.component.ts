@@ -43,6 +43,18 @@ export class LandingComponent implements OnInit {
           appSettings.getString("survey_lng");
         this.router.navigate(["/survey", linkOne]);
         break;
+      case "quiz":
+        let quiz =
+          // "https://cawi.ipsos.rs/sms3/indexCLT.php?projekatid=190654930101&tip_upitnikaid=1420055&clt&ispitanikid=" +
+          "http://cawi.istrazivanje.rs/sms3/?code=qenkcd5az75j7357746&ispitanikid=" +
+          appSettings.getString("ispitanikid") +
+          "&lng=" +
+          appSettings.getString("survey_lng") +
+          "&email=" +
+          appSettings.getString("emailIpsosApp");
+        console.log(quiz);
+        this.router.navigate(["/survey", quiz]);
+        break;
     }
   }
 }

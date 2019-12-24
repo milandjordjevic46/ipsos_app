@@ -1,5 +1,5 @@
 .kartica {
-  height: 200;
+  min-height: 100;
   text-align: center;
   margin: 20;
   border-radius: 20;

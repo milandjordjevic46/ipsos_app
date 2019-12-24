@@ -1,13 +1,31 @@
-<FlexboxLayout flexDirection="column" justifyContent="space-between">
-
-    <StackLayout class="kartica" [nsRouterLink]="['/lng']" pageTransition="slide">
-        <Label class="fas" text="&#xf0ac;" style="font-size: 100;"></Label>
-        <Label text="Change survey language" style="font-size: 30;"></Label>
+<FlexboxLayout flexDirection="column">
+    <StackLayout class="actionBr" backgroundColor="#007bff" color='white' height="40">
+        <FlexboxLayout flexDirection="row" justifyContent='space-between'>
+            <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
+            <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']"
+                pageTransition="slide">
+                <Label class="float-btn-text fas" text="&#xf085;"></Label>
+            </StackLayout>
+        </FlexboxLayout>
     </StackLayout>
 
-    <StackLayout class="kartica" (tap)="logOut()">
-        <Label class="fas" text="&#xf2f5;" style="font-size: 100;"></Label>
-        <Label text="Logout" style="font-size: 30;"></Label>
-    </StackLayout>
+    <FlexboxLayout class='kartica' [nsRouterLink]="['/lng']" pageTransition="slide" justifyContent='center'
+        flexDirection="column" alignSelf="center" style="width: 90%;">
+        <Label class="fas" text="&#xf0ac;" style="font-size: 30;"></Label>
+        <Label text="Change survey language" style="font-size: 20;"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout class='kartica' justifyContent='center' flexDirection="column" alignSelf="center"
+        style="width: 90%;">
+        <Label class="fas" text="&#xf0e0;" style="font-size: 30;"></Label>
+        <Label text="Podrška" style="font-size: 20;"></Label>
+        <Label text="dusan.zizovic@ipsos.com" style="font-size: 20;"></Label>
+    </FlexboxLayout>
+
+    <FlexboxLayout class='kartica' (tap)="logOut()" justifyContent='center' flexDirection="column" alignSelf="center"
+        style="width: 90%;">
+        <Label class="fas" text="&#xf2f5;" style="font-size: 30;"></Label>
+        <Label text="Logout" style="font-size: 20;"></Label>
+    </FlexboxLayout>
 
 </FlexboxLayout>

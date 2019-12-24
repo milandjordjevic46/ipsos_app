@@ -1,4 +1,5 @@
-import { Component, ChangeDetectorRef, ViewChild } from "@angular/core";
+import { Component } from "@angular/core";
+import { Page } from "ui/page";
 
 @Component({
   selector: "app-home",
@@ -8,5 +9,7 @@ import { Component, ChangeDetectorRef, ViewChild } from "@angular/core";
 export class HomeComponent {
   title = "ipsos_app";
 
-  constructor() {}
+  constructor(private page: Page) {
+    page.actionBarHidden = true;
+  }
 }
