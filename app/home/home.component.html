@@ -1,36 +1,16 @@
-<!-- <Page loaded="onPageLoaded"> -->
-  <!-- <ActionBar title="Ipsos Strategic Marketing" class="action-bar">
-    <StackLayout orientation="horizontal" height="20" ios:horizontalAlignment="center"
-      android:horizontalAlignment="left">
-      <Image src="~/assets/ipsos_logo.png" height="100%" class="action-image"></Image>
-      <Label text="Ipsos Strategic Marketing" class="action-label"></Label>
-    </StackLayout>
-  </ActionBar> -->
+<FlexboxLayout flexDirection="column">
+  <StackLayout class="actionBr" color='white' height="80">
+    <FlexboxLayout flexDirection="row" justifyContent='space-between'>
+      <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
+      <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']" pageTransition="slide">
+        <Label class="float-btn-text fas" text="&#xf085;"></Label>
+      </StackLayout>
 
+    </FlexboxLayout>
+  </StackLayout>
 
-  <FlexboxLayout flexDirection="column">
-    <StackLayout class="actionBr" backgroundColor="#007bff" color='white' height="80">
-      <FlexboxLayout flexDirection="row" justifyContent='space-between'>
-        <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
-        <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']" pageTransition="slide">
-          <Label class="float-btn-text fas" text="&#xf085;"></Label>
-        </StackLayout>
+  <StackLayout>
+    <app-landing></app-landing>
+  </StackLayout>
 
-      </FlexboxLayout>
-    </StackLayout>
-
-    <StackLayout>
-
-      <TabView width="100%">
-        <StackLayout *tabItem="{title: 'Survey'}">
-          <app-landing></app-landing>
-        </StackLayout>
-
-        <StackLayout *tabItem="{title: 'Statistics'}">
-          <app-stats></app-stats>
-        </StackLayout>
-
-      </TabView>
-    </StackLayout>
-  </FlexboxLayout>
-<!-- </Page> -->
+</FlexboxLayout>

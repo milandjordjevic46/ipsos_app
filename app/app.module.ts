@@ -21,6 +21,8 @@ import { LngComponent } from "./shared/lng/lng.component";
 
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { OptionsComponent } from './shared/options/options.component';
+import { DailySurveyComponent } from './daily-survey/daily-survey.component';
+import { NavigationMenuComponent } from './shared/navigation-menu/navigation-menu.component';
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from 'nativescript-angular/forms';
@@ -38,7 +40,9 @@ import { OptionsComponent } from './shared/options/options.component';
     LoaderComponent,
     SurveyComponent,
     LngComponent,
-    OptionsComponent
+    OptionsComponent,
+    DailySurveyComponent,
+    NavigationMenuComponent
   ],
   imports: [
     NativeScriptModule,

@@ -1,7 +1,8 @@
 import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 import * as appSettings from "application-settings";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { WebView, LoadEventData } from "ui/web-view";
+import { Page } from "tns-core-modules/ui/page/page";
 
 @Component({
   selector: "app-survey",
@@ -12,7 +13,12 @@ export class SurveyComponent implements OnInit {
   @ViewChild("myDiv", { static: true }) webview: ElementRef;
   webViewSrc: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private page: Page
+  ) {
+    page.actionBarHidden = true;
     this.webViewSrc = this.route.snapshot.paramMap.get("surveyLink");
   }
 

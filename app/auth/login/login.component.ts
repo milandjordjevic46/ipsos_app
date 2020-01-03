@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   ) {
     this.loginForm = this.formBuilder.group({
       email: [null, Validators.required],
-      password: [null, Validators.required],
+      // password: [null, Validators.required],
       lng: device.language
     });
   }
@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
     const link = "appLogin.php?token=" + appSettings.getString("token_tok");
     this.authService.login(link, this.loginForm.value).subscribe(
       res => {
-        console.log(res, "RESRESRES");
         appSettings.setString("emailIpsosApp", this.loginForm.value.email);
         appSettings.setString(
           "ispitanikid",
@@ -52,7 +51,7 @@ export class LoginComponent implements OnInit {
         this.progressLogin = false;
       },
       err => {
-        console.log(err);
+        console.log("err", err);
         this.progressLogin = false;
       }
     );

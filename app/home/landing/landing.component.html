@@ -1,6 +1,6 @@
 <ScrollView orientation="vertical">
     <FlexboxLayout flexDirection="column" justifyContent="space-around">
-        <StackLayout (tap)="radiAnketu('onePerDay')" id="dnevniIzvestaj" class="groupStyle_background">
+        <StackLayout [nsRouterLink]="['/dialy_survey']" id="dnevniIzvestaj" class="groupStyle_background">
             <Label text="IZVEŠTAJ DANA" class="tekst_u_slici"></Label>
         </StackLayout>
 
@@ -13,10 +13,20 @@
         <StackLayout class="prelaz2"></StackLayout>
 
         <StackLayout id="kviz" class="groupStyle_background" (tap)="radiAnketu('quiz')">
-            <TextView text="Ne propuštaj šansu da proveris svoje znanje,a I dobro se zabavis, zaigraj KVIZ!"
+            <TextView editable="false" (tap)="radiAnketu('quiz')"
+                text="Ne propuštaj šansu da proveris svoje znanje,a I dobro se zabavis, zaigraj KVIZ!"
                 class="tekst_u_slici"></TextView>
         </StackLayout>
 
-        <Button class="btn btn-primary" [nsRouterLink]="['/login']" text="LOGIN"></Button>
+        <!-- <StackLayout> -->
+        <FlexboxLayout flexDirection="column" justifyContent="center" alignItems='center'
+            style="background-color: #007bff; height: 80">
+            <Label style="color: white; text-align: center; font-weight: bold; font-size: 30"
+                text="Vi ste na: {{kviz_info.poz}} poziciji"></Label>
+            <Label style="color: white; text-align: center; font-weight: bold; font-size: 30"
+                text="Ostvarili ste: {{kviz_info.br_poena}} bodova"></Label>
+        </FlexboxLayout>
+        <!-- </StackLayout> -->
+
     </FlexboxLayout>
 </ScrollView>

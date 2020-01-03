@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import * as appSettings from "application-settings";
 import { Router } from "@angular/router";
+import { Page } from "tns-core-modules/ui/page/page";
 
 @Component({
   selector: "app-lng",
@@ -13,10 +14,10 @@ export class LngComponent implements OnInit {
   activeLng: string;
   view = require("ui/core/view");
   drawer;
-  constructor(private router: Router) {
-    this.htmlString = `<h1>Izaberite jezik za prikazivanje anketa</h1>`;
+  constructor(private router: Router, private page: Page) {
+    page.actionBarHidden = true;
+    this.htmlString = `<h1>Izaberite zemlju</h1>`;
     this.btns = [
-      { txt: "ENGLESKI", val: "en" },
       { txt: "HRVATSKI", val: "hr" },
       { txt: "SRPSKI", val: "sr" },
       { txt: "SLOVENACKI", val: "sl" }
@@ -37,14 +38,12 @@ export class LngComponent implements OnInit {
   }
 
   pageLoaded = function(args) {
-    debugger;
     var page = args.object;
     console.log("argSSSSSS", args);
     this.drawer = this.view.getViewById(page, "sideDrawer");
   };
 
   toggleDrawer = function() {
-    debugger;
     this.drawer.toggleDrawerState();
   };
 }

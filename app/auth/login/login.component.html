@@ -15,9 +15,9 @@
         <Image class="logo" width="100%" height="50%" src="~/assets/ipsos_logo.png"></Image>
         <TextField formControlName="email" class='fieldLine' keyboardType="email" width="80%" hint="E-Mail...">
         </TextField>
-        <TextField formControlName="password" secure="true" width="80%" hint="Password..."></TextField>
+        <!-- <TextField formControlName="password" secure="true" width="80%" hint="Password..."></TextField> -->
         <Button *ngIf="!progressLogin" type="submit" name="submit" width="80%" text="{{ 'login' | L: 'login' }}"
-            (tap)="login()"></Button>
+            (tap)="login()" style="margin-top: 30;"></Button>
         <app-loader *ngIf="progressLogin"></app-loader>
     </StackLayout>
     <StackLayout class="bottom_text" height="5%">

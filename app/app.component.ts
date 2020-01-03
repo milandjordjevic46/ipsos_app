@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import * as firebase from "nativescript-plugin-firebase";
 import * as appSettings from "application-settings";
+import { Router } from "@angular/router";
+import { Page } from "tns-core-modules/ui/page/page";
+import { PlatformLocation } from "@angular/common";
+import { MainService } from "./main.service";
 const dialogs = require("ui/dialogs");
 
 @Component({
@@ -10,6 +14,9 @@ const dialogs = require("ui/dialogs");
   `
 })
 export class AppComponent implements OnInit {
+  constructor(private router: Router, private page: Page) {
+    // page.actionBarHidden = true;
+  }
   ngOnInit() {
     console.log(appSettings.getString("token_tok"));
     firebase

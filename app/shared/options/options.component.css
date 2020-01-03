@@ -4,7 +4,11 @@
   margin: 20;
   border-radius: 20;
   color: white;
-  background-color: #17a2b8;
+  background-color: #007bff;
   border-color: white;
   border-width: 1;
+}
+
+.color_red {
+  background-color: #dc3545;
 }

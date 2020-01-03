@@ -8,6 +8,7 @@ import { AuthGuard } from "./auth/auth.guard";
 import { SurveyComponent } from "./shared/survey/survey.component";
 import { LngComponent } from "./shared/lng/lng.component";
 import { OptionsComponent } from "./shared/options/options.component";
+import { DailySurveyComponent } from "./daily-survey/daily-survey.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
@@ -15,6 +16,11 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
   { path: "options", component: OptionsComponent, canActivate: [AuthGuard] },
+  {
+    path: "dialy_survey",
+    component: DailySurveyComponent,
+    canActivate: [AuthGuard]
+  },
   {
     path: "survey/:surveyLink",
     component: SurveyComponent,
