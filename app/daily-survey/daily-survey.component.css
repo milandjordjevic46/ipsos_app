@@ -6,8 +6,8 @@
 }
 
 #skrol {
-  background-image: url("~/assets/survey_background.jpg");
+  background-image: url("~/assets/slika1.jpg");
   height: 100%;
-  background-repeat: space;
-  /* background-size: 100% auto; */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

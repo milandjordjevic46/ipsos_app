@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 import { device } from "tns-core-modules/platform/platform";
 import { ModalDialogService } from "nativescript-angular/directives/dialogs";
+const dialogs = require("ui/dialogs");
 
 @Component({
   selector: "app-login",
@@ -51,7 +52,14 @@ export class LoginComponent implements OnInit {
         this.progressLogin = false;
       },
       err => {
-        console.log("err", err);
+        console.log("ERRRRRRRRR", err.error);
+        if (err.error && err.error.msg) {
+          dialogs.alert({
+            title: "",
+            message: err.error.msg,
+            okButtonText: "OK!"
+          });
+        }
         this.progressLogin = false;
       }
     );

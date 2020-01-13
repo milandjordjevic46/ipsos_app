@@ -16,7 +16,7 @@ export class LngComponent implements OnInit {
   drawer;
   constructor(private router: Router, private page: Page) {
     page.actionBarHidden = true;
-    this.htmlString = `<h1>Izaberite zemlju</h1>`;
+    // this.htmlString = `<h1>Izaberite zemlju</h1>`;
     this.btns = [
       { txt: "HRVATSKI", val: "hr" },
       { txt: "SRPSKI", val: "sr" },

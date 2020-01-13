@@ -13,6 +13,12 @@ const dialogs = require("ui/dialogs");
 })
 export class DailySurveyComponent implements OnInit {
   days: any;
+  msgs: {
+    en: "It is now not possible to complete a report for this day!";
+    sr: "Sada nije moguće popuniti izveštaj za ovaj dan!";
+    hr: "Sada nije moguće dovršiti izvještaj za ovaj dan!";
+    sl: "Poročila za ta dan zdaj ni mogoče dokončati!";
+  };
   constructor(
     private page: Page,
     private service: MainService,
@@ -78,10 +84,11 @@ export class DailySurveyComponent implements OnInit {
   }
 
   goToSurvey(param): any {
+    let country = appSettings.getString("survey_lng");
     if (param.status !== "open" && param.status !== "started") {
       return dialogs.alert({
         title: "Oops!",
-        message: "Sada nije moguće popuniti izveštaj za ovaj dan!",
+        message: this.msgs[country],
         okButtonText: "OK!"
       });
     }

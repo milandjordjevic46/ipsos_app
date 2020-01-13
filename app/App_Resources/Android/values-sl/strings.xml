@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="choose_country">"Izberite državo"</string>
+  <string name="igraj_kviz">"Sodeluj v KVIZU!"</string>
+  <string name="bodova">"točk"</string>
+  <string name="pozicija">"mestu"</string>
+  <string name="izvestaj_dana">"VEČERNO POROČILO"</string>
+  <string name="dnevnik_kafa">"DNEVNI VNOS KAVIC"</string>
+  <string name="logout">"Odjava"</string>
+  <string name="prom_zemlja">"Spremenite državo"</string>
+  <string name="podrska">"Podpora"</string>
+  <string name="sacuvaj">"prihranite"</string>
+  <string name="_app_name_1k3Sbz">"Kavni dnevnik"</string>
+  <string name="app_name">"Kavni dnevnik"</string>
+  <string name="title_activity_kimera">"Kavni dnevnik"</string>
+</resources>

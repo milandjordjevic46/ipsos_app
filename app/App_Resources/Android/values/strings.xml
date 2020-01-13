@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="login">"Login"</string>
-  <string name="hello">"CAO"</string>
-  <string name="_app_name_1k3Sbz">"Aplikacija"</string>
-  <string name="app_name">"Aplikacija"</string>
-  <string name="title_activity_kimera">"Aplikacija"</string>
-  <string name="igraj_kviz">"igraj_kviz"</string>
-  <string name="bodova">"bodova"</string>
-  <string name="pozicija">"pozicija"</string>
-  <string name="izvestaj_dana">"izvestaj_dana"</string>
-  <string name="dnevnik_kafa">"dnevnik_kafa"</string>
-  <string name="logout">"logout"</string>
-  <string name="prom_zemlja">"prom_zemlja"</string>
-  <string name="podrska">"podrska"</string>
-  <string name="sacuvaj">"sacuvaj"</string>
+  <string name="choose_country">"Choose country"</string>
+  <string name="igraj_kviz">"Play the QUIZ!"</string>
+  <string name="bodova">"points"</string>
+  <string name="pozicija">"position"</string>
+  <string name="izvestaj_dana">"THE EVENING REPORT"</string>
+  <string name="dnevnik_kafa">"DAILY CONSUMPTION OF COFFEE"</string>
+  <string name="logout">"Logout"</string>
+  <string name="prom_zemlja">"Change the country"</string>
+  <string name="podrska">"Technical support"</string>
+  <string name="sacuvaj">"save"</string>
+  <string name="_app_name_1k3Sbz">"Coffee diary"</string>
+  <string name="app_name">"Coffee diary"</string>
+  <string name="title_activity_kimera">"Coffee diary"</string>
 </resources>

@@ -2,10 +2,10 @@
     <FlexboxLayout flexDirection="column" class="groupStyle_background" justifyContent="space-between"
         id="dnevniIzvestaj" style="height: 100%;">
 
-        <Label text="{{ 'MOJ DNEVNIK POPIJENIH KAFA' | L: 'dnevnik_kafa' }}" (tap)="radiAnketu('multiPerDay')"
-            class="tekst_u_slici font_home"></Label>
+        <Label text="{{ 'dnevnik_kafa' | L: 'dnevnik_kafa' }}" (tap)="radiAnketu('multiPerDay')"
+            class="tekst_u_slici font_home" style="margin-top: 50"></Label>
 
-        <Label text="{{ 'IZVEŠTAJ DANA' | L: 'izvestaj_dana' }}" [nsRouterLink]="['/dialy_survey']"
+        <Label text="{{ 'izvestaj_dana' | L: 'izvestaj_dana' }}" [nsRouterLink]="['/dialy_survey']"
             class="tekst_u_slici font_home"></Label>
 
         <FlexboxLayout flexDirection="column" class="kviz_back" justifyContent="center" alignItems='center'
@@ -14,8 +14,7 @@
                 text="{{kviz_info.poz}}. {{ 'pozicija' | L: 'pozicija' }}"></Label>
             <Label style="color: white; text-align: center; font-weight: bold; font-size: 30"
                 text="{{kviz_info.br_poena}} {{ 'bodova' | L: 'bodova' }}"></Label>
-            <Label text="{{ 'Zaigraj KVIZ' | L: 'igraj_kviz' }}" (tap)="radiAnketu('quiz')"
-                class="tekst_u_slici"></Label>
+            <Label text="{{ 'igraj_kviz' | L: 'igraj_kviz' }}" (tap)="radiAnketu('quiz')" class="tekst_u_slici"></Label>
         </FlexboxLayout>
     </FlexboxLayout>
 </StackLayout>

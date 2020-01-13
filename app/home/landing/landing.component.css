@@ -6,14 +6,14 @@
 .groupStyle_background {
   background-repeat: no-repeat;
   /* height: 300; */
-  background-size: auto;
+  background-size: 100% 100%;
   /* background-repeat: no-repeat;
   vertical-align: middle;
   vertical-align: middle; */
 }
 
 #dnevniIzvestaj {
-  background-image: url("~/assets/unos.jpg");
+  background-image: url("~/assets/slika1.jpg");
 }
 
 #posleKafe {

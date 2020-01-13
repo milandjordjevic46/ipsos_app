@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="choose_country">"Izaberite zemlju"</string>
   <string name="igraj_kviz">"Zaigraj KVIZ"</string>
   <string name="bodova">"bodova"</string>
   <string name="pozicija">"pozicija"</string>
@@ -12,6 +13,4 @@
   <string name="_app_name_1k3Sbz">"Dnevnik kafa"</string>
   <string name="app_name">"Dnevnik kafa"</string>
   <string name="title_activity_kimera">"Dnevnik kafa"</string>
-  <string name="login">"Login"</string>
-  <string name="hello">"CAO"</string>
 </resources>
