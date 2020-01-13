@@ -1,13 +1,13 @@
 {
     "app.name": "Dnevnik kafa",
-    "sacuvaj": "sacuvaj",
+    "sacuvaj": "sačuvaj",
     "podrska": "Podrška",
     "prom_zemlja": "Promenite zemlju",
-    "logout": "LOGOUT",
+    "logout": "Odjavi se",
     "dnevnik_kafa": "MOJ DNEVNIK POPIJENIH KAFA",
-    "izvestaj_dana": "IZVEŠTAJ DANA",
+    "izvestaj_dana": "VEČERNJI IZVEŠTAJ",
     "pozicija": "pozicija",
     "bodova": "bodova",
-    "igraj_kviz": "Zaigraj KVIZ",
+    "igraj_kviz": "Zaigraj KVIZ!",
     "choose_country": "Izaberite zemlju"
 }

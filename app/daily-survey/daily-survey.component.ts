@@ -13,11 +13,11 @@ const dialogs = require("ui/dialogs");
 })
 export class DailySurveyComponent implements OnInit {
   days: any;
-  msgs: {
-    en: "It is now not possible to complete a report for this day!";
-    sr: "Sada nije moguće popuniti izveštaj za ovaj dan!";
-    hr: "Sada nije moguće dovršiti izvještaj za ovaj dan!";
-    sl: "Poročila za ta dan zdaj ni mogoče dokončati!";
+  msgs = {
+    en: "It is now not possible to complete a report for this day!",
+    sr: "Sada nije moguće popuniti izveštaj za ovaj dan!",
+    hr: "Sada nije moguće dovršiti izvještaj za ovaj dan!",
+    sl: "Poročila za ta dan zdaj ni mogoče dokončati!"
   };
   constructor(
     private page: Page,
@@ -34,25 +34,30 @@ export class DailySurveyComponent implements OnInit {
     switch (item.status) {
       // 007bff96
       case "open":
-        style = "linear-gradient(to right, #4496eff7 , #007bff)";
+        // style = "linear-gradient(to right, #4496eff7 , #007bff)";
+        style = "#007bff";
         width = "80%";
         break;
       case "done":
-        style = "linear-gradient(to right, #28a74570 , 28a745)";
+        // style = "linear-gradient(to right, #28a74570 , #28a745)";
+        style = "#28a745";
         break;
       case "started":
-        style = "linear-gradient(to right, #ffc10785 , #ffc107)";
+        // style = "linear-gradient(to right, #ffc10785 , #ffc107)";
+        style = "#ffc107";
         break;
       case "closed":
-        style = "linear-gradient(to right, #dc354594 , #dc3545)";
+        // style = "linear-gradient(to right, #dc354594 , #dc3545)";
+        style = "#dc3545";
         break;
       default:
-        style = "linear-gradient(to right, #0000004f , #e3e3e3)";
+        // style = "linear-gradient(to right, #0000004f , #e3e3e3)";
+        style = "#e3e3e3";
         width = "60%";
         break;
     }
     return {
-      "background-image": style,
+      "background-color": style,
       width: width,
       border: 0,
       color: "black"
@@ -85,6 +90,7 @@ export class DailySurveyComponent implements OnInit {
 
   goToSurvey(param): any {
     let country = appSettings.getString("survey_lng");
+    console.log("COUNTRYYYY", country);
     if (param.status !== "open" && param.status !== "started") {
       return dialogs.alert({
         title: "Oops!",
@@ -94,7 +100,7 @@ export class DailySurveyComponent implements OnInit {
     }
     let dan = param.day * 1 + 1;
     let link =
-      "https://online.ipsos-adria.com?code=7k20zytjdeco10000007&id_ispitanika=" +
+      "https://online.ipsos-adria.com?code=7k20zytjdeco10000007&ispitanikid=" +
       appSettings.getString("ispitanikid") +
       "&lng=" +
       appSettings.getString("survey_lng") +

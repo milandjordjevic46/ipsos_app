@@ -16,6 +16,12 @@ export class LandingComponent implements OnInit {
   afterImage: string;
   dailyImage: string;
   kviz_info: object;
+  msgs_quiz = {
+    en: "You have already completed the quiz!",
+    sr: "Već ste popunili kviz danas!",
+    sl: "Kviz ste že zaključili!",
+    hr: "Već ste završili kviz!"
+  };
 
   constructor(
     private router: Router,
@@ -55,6 +61,7 @@ export class LandingComponent implements OnInit {
   }
 
   radiAnketu(what: string) {
+    let country = appSettings.getString("survey_lng");
     switch (what) {
       case "multiPerDay":
         let linkMulti =
@@ -73,12 +80,12 @@ export class LandingComponent implements OnInit {
         day_niz = JSON.parse(appSettings.getString("danD"));
         if (day_niz.indexOf(day) != -1)
           return dialogs.alert({
-            title: "Oops!",
-            message: "Već ste popunili kviz danas!",
+            title: "",
+            message: this.msgs_quiz[country],
             okButtonText: "OK!"
           });
         let quiz =
-          "https://online.ipsos-adria.com?code=ayfh4w6yiksf10000011&id_ispitanika=" +
+          "https://online.ipsos-adria.com?code=ayfh4w6yiksf10000011&ispitanikid=" +
           appSettings.getString("ispitanikid") +
           "&lng=" +
           appSettings.getString("survey_lng") +
