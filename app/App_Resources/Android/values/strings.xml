@@ -5,4 +5,13 @@
   <string name="_app_name_1k3Sbz">"Aplikacija"</string>
   <string name="app_name">"Aplikacija"</string>
   <string name="title_activity_kimera">"Aplikacija"</string>
+  <string name="igraj_kviz">"igraj_kviz"</string>
+  <string name="bodova">"bodova"</string>
+  <string name="pozicija">"pozicija"</string>
+  <string name="izvestaj_dana">"izvestaj_dana"</string>
+  <string name="dnevnik_kafa">"dnevnik_kafa"</string>
+  <string name="logout">"logout"</string>
+  <string name="prom_zemlja">"prom_zemlja"</string>
+  <string name="podrska">"podrska"</string>
+  <string name="sacuvaj">"sacuvaj"</string>
 </resources>

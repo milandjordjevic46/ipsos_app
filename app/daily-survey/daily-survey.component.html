@@ -15,7 +15,7 @@
         </StackLayout>
         <StackLayout style="margin-top: 50">
             <Button *ngFor="let item of days; trackBy: index" (tap)='goToSurvey(item)' class="btn btn_shadow"
-                [ngStyle]="stylingButtons(item)" text='{{item.date}}'>
+                [ngStyle]="stylingButtons(item)" text='DAN {{item.day + 1}}'>
             </Button>
         </StackLayout>
 

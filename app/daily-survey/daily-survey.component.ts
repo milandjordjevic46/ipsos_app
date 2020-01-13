@@ -62,8 +62,10 @@ export class DailySurveyComponent implements OnInit {
   }
   takeDays() {
     this.service
-      .getDays("get_days.php?ispitanikid=" + 1090)
-      // .getDays("get_days.php?ispitanikid=" + appSettings.getString("token_tok"))
+      // .getDays("get_days.php?ispitanikid=" + 1090)
+      .getDays(
+        "get_days.php?ispitanikid=" + appSettings.getString("ispitanikid")
+      )
       .subscribe(
         res => {
           this.days = res;

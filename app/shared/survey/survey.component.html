@@ -1,30 +1,7 @@
 <FlexboxLayout flexDirection="column">
-    <!-- <StackLayout class="actionBr" backgroundColor="#007bff" color='white' height="40">
-        <FlexboxLayout flexDirection="row" justifyContent='space-between'>
-            <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
-            <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']"
-                pageTransition="slide">
-                <Label class="float-btn-text fas" text="&#xf085;"></Label>
-            </StackLayout>
-        </FlexboxLayout>
-    </StackLayout> -->
     <app-navigation-menu></app-navigation-menu>
 
     <StackLayout>
         <nota:WebViewExt [src]="webViewSrc"></nota:WebViewExt>
     </StackLayout>
 </FlexboxLayout>
-
-
-
-<!-- <ActionBar title="Ipsos Strategic Marketing" class="action-bar">
-    <StackLayout orientation="horizontal" height="20" ios:horizontalAlignment="center"
-        android:horizontalAlignment="left">
-        <Image src="~/assets/ipsos_logo.png" height="100%" class="action-image"></Image>
-        <Label text="Ipsos Strategic Marketing" class="action-label"></Label>
-    </StackLayout>
-</ActionBar> -->
-
-
-<!-- <WebView #myDiv row="1" height="100%" width="100%" [src]="webViewSrc"></WebView> -->
-<!-- <nota:WebViewExt [src]="webViewSrc"></nota:WebViewExt> -->

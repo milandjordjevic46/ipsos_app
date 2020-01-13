@@ -1,5 +1,12 @@
 {
-    "app.name": "Aplikacija",
-    "hello": "CAO",
-    "login": "Login"
+    "app.name": "Coffee diary",
+    "sacuvaj": "save",
+    "podrska": "Technical support",
+    "prom_zemlja": "Change the country",
+    "logout": "Logout",
+    "dnevnik_kafa": "DAILY CONSUMPTION OF COFFEE",
+    "izvestaj_dana": "THE EVENING REPORT",
+    "pozicija": "position",
+    "bodova": "points",
+    "igraj_kviz": "Play the QUIZ!"
 }

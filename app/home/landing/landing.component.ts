@@ -89,7 +89,7 @@ export class LandingComponent implements OnInit {
           "&d";
         day_niz.push(day);
         appSettings.setString("danD", JSON.stringify(day_niz));
-        console.log(quiz);
+        console.log("quiz", quiz);
         this.router.navigate(["/survey", quiz]);
         break;
     }

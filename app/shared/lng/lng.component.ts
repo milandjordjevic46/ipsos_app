@@ -20,7 +20,7 @@ export class LngComponent implements OnInit {
     this.btns = [
       { txt: "HRVATSKI", val: "hr" },
       { txt: "SRPSKI", val: "sr" },
-      { txt: "SLOVENACKI", val: "sl" }
+      { txt: "SLOVENSKO", val: "sl" }
     ];
   }
 

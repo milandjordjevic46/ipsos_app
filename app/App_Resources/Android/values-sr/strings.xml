@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="hello">"srpski"</string>
-  <string name="_app_name_1k3Sbz">"Aplikacija"</string>
-  <string name="app_name">"Aplikacija"</string>
-  <string name="title_activity_kimera">"Aplikacija"</string>
+  <string name="igraj_kviz">"Zaigraj KVIZ"</string>
+  <string name="bodova">"bodova"</string>
+  <string name="pozicija">"pozicija"</string>
+  <string name="izvestaj_dana">"IZVEŠTAJ DANA"</string>
+  <string name="dnevnik_kafa">"MOJ DNEVNIK POPIJENIH KAFA"</string>
+  <string name="logout">"LOGOUT"</string>
+  <string name="prom_zemlja">"Promenite zemlju"</string>
+  <string name="podrska">"Podrška"</string>
+  <string name="sacuvaj">"sacuvaj"</string>
+  <string name="_app_name_1k3Sbz">"Dnevnik kafa"</string>
+  <string name="app_name">"Dnevnik kafa"</string>
+  <string name="title_activity_kimera">"Dnevnik kafa"</string>
   <string name="login">"Login"</string>
+  <string name="hello">"CAO"</string>
 </resources>
