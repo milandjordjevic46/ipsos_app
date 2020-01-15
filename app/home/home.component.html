@@ -1,5 +1,5 @@
 <FlexboxLayout flexDirection="column">
-  <StackLayout class="actionBr" color='white' height="80">
+  <!-- <StackLayout class="actionBr" color='white' height="80">
     <FlexboxLayout flexDirection="row" justifyContent='space-between'>
       <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
       <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']" pageTransition="slide">
@@ -7,8 +7,8 @@
       </StackLayout>
 
     </FlexboxLayout>
-  </StackLayout>
-
+  </StackLayout> -->
+  <app-navigation-menu id="navigacija" [ipHeight]="80"></app-navigation-menu>
   <StackLayout>
     <app-landing></app-landing>
   </StackLayout>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation-menu.component.css']
 })
 export class NavigationMenuComponent implements OnInit {
-
-  constructor() { }
+  @Input('ipHeight')
+  importedVal: string;
+  visina: string;
+  
+  constructor(    private _location: Location,
+    private el: ElementRef
+    ) { }
 
   ngOnInit() {
+    this.visina= this.importedVal ? this.importedVal : '40';
+  }
+
+  back() {
+    this._location.back();
+    
   }
 
 }

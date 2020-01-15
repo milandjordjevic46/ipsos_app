@@ -1,5 +1,6 @@
-<StackLayout class="actionBr" backgroundColor="#007bff" color='white' height="40">
+<StackLayout id="navig" class="actionBr" backgroundColor="#007bff" color='white' [height]='visina'>
     <FlexboxLayout flexDirection="row" justifyContent='space-between'>
+        <Button (tap)="back()" class="fas" text="&#xf060;"></Button>
         <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
         <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']" pageTransition="slide">
             <Label class="float-btn-text fas" text="&#xf085;"></Label>

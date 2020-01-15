@@ -1,20 +1,12 @@
 <FlexboxLayout flexDirection="column">
 
-    <StackLayout class="actionBr" backgroundColor="#007bff" color='white' height="80">
-        <FlexboxLayout flexDirection="row" justifyContent='space-between'>
-            <Label class="float-btn-text" text="Ipsos Strategic Marketing" style="margin: 5;"></Label>
-            <StackLayout class="float-btn actionBr" style="margin: 5;" [nsRouterLink]="['/options']"
-                pageTransition="slide">
-                <Label class="float-btn-text fas" text="&#xf085;"></Label>
-            </StackLayout>
-        </FlexboxLayout>
-    </StackLayout>
+    <app-navigation-menu id="navigacija" [ipHeight]="80"></app-navigation-menu>
 
     <ScrollView id="skrol" orientation="vertical">
         <StackLayout height="40">
         </StackLayout>
         <StackLayout style="margin-top: 50">
-            <Button *ngFor="let item of days; trackBy: index" (tap)='goToSurvey(item)' class="btn btn_shadow"
+            <Button *ngFor="let item of days" (tap)='goToSurvey(item)' class="btn btn_shadow"
                 [ngStyle]="stylingButtons(item)" text='DAN {{item.day + 1}}'>
             </Button>
         </StackLayout>

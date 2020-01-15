@@ -1,3 +1,11 @@
-"hello" = "srpski";
-"_app_name_1k3Sbz" = "Aplikacija";
-"login" = "Login";
+"choose_country" = "Izaberite zemlju";
+"igraj_kviz" = "Zaigraj KVIZ!";
+"bodova" = "bodova";
+"pozicija" = "pozicija";
+"izvestaj_dana" = "VEČERNJI IZVEŠTAJ";
+"dnevnik_kafa" = "DNEVNI UNOS POPIJENIH KAFA VAN KUĆE";
+"logout" = "Odjavi se";
+"prom_zemlja" = "Promenite zemlju";
+"podrska" = "Podrška";
+"sacuvaj" = "sačuvaj";
+"_app_name_1k3Sbz" = "Dnevnik kafa";

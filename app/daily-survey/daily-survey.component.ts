@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, Input } from "@angular/core";
 import { Page } from "tns-core-modules/ui/page/page";
 import { MainService } from "../main.service";
 import * as appSettings from "application-settings";
@@ -12,6 +12,8 @@ const dialogs = require("ui/dialogs");
   styleUrls: ["./daily-survey.component.css"]
 })
 export class DailySurveyComponent implements OnInit {
+
+
   days: any;
   msgs = {
     en: "It is now not possible to complete a report for this day!",
@@ -70,6 +72,7 @@ export class DailySurveyComponent implements OnInit {
       this.takeDays();
     });
     this.takeDays();
+
   }
   takeDays() {
     this.service

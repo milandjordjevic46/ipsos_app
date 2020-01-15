@@ -4,8 +4,8 @@ import * as appSettings from "application-settings";
 import { device } from "tns-core-modules/platform/platform";
 import { PlatformLocation } from "@angular/common";
 import { MainService } from "../../main.service";
-const dialogs = require("ui/dialogs");
 
+const dialogs = require("ui/dialogs");
 @Component({
   selector: "app-landing",
   templateUrl: "./landing.component.html",
@@ -15,7 +15,7 @@ export class LandingComponent implements OnInit {
   htmlString: string;
   afterImage: string;
   dailyImage: string;
-  kviz_info: object;
+  kviz_info;
   msgs_quiz = {
     en: "You have already completed the quiz!",
     sr: "Već ste popunili kviz danas!",
@@ -101,4 +101,5 @@ export class LandingComponent implements OnInit {
         break;
     }
   }
+
 }

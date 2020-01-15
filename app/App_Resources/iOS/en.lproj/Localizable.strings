@@ -1,3 +1,11 @@
-"login" = "Login";
-"hello" = "CAO";
-"_app_name_1k3Sbz" = "Aplikacija";
+"choose_country" = "Choose country";
+"igraj_kviz" = "Play the QUIZ!";
+"bodova" = "points";
+"pozicija" = "position";
+"izvestaj_dana" = "THE EVENING REPORT";
+"dnevnik_kafa" = "DAILY CONSUMPTION OF COFFEE";
+"logout" = "Logout";
+"prom_zemlja" = "Change the country";
+"podrska" = "Technical support";
+"sacuvaj" = "save";
+"_app_name_1k3Sbz" = "Coffee diary";
