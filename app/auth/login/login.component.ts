@@ -48,8 +48,16 @@ export class LoginComponent implements OnInit {
           "ispitanikid",
           JSON.stringify(res["ispitanikid"])
         );
-        this.router.navigate(["/home"]);
-        this.progressLogin = false;
+        let options = {
+          title: "",
+          message: res["msg"],
+          okButtonText: "OK!"
+        };
+
+        dialogs.alert(options).then(() => {
+          this.router.navigate(["/home"]);
+          this.progressLogin = false;
+        });
       },
       err => {
         console.log("ERRRRRRRRR", err.error);

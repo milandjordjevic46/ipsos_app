@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="igraj_kviz">"Sudjeluj u KVIZU!"</string>
+  <string name="bodova">"bodova"</string>
+  <string name="pozicija">"mjestu"</string>
+  <string name="izvestaj_dana">"VEČERNJI IZVJEŠTAJ"</string>
+  <string name="dnevnik_kafa">"DNEVNI UNOS ISPIJENIH KAVA"</string>
+  <string name="logout">"Odjava"</string>
+  <string name="prom_zemlja">"Odaberite zemlju"</string>
+  <string name="podrska">"Podrška"</string>
+  <string name="sacuvaj">"sačuvaj"</string>
+  <string name="_app_name_1k3Sbz">"Dnevnik kave"</string>
+  <string name="app_name">"Dnevnik kave"</string>
+  <string name="title_activity_kimera">"Dnevnik kave"</string>
+  <string name="choose_country">"Choose country"</string>
+</resources>

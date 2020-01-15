@@ -18,8 +18,8 @@ export class LngComponent implements OnInit {
     page.actionBarHidden = true;
     // this.htmlString = `<h1>Izaberite zemlju</h1>`;
     this.btns = [
-      { txt: "HRVATSKA", val: "hr" },
       { txt: "SRBIJA", val: "sr" },
+      { txt: "HRVATSKA", val: "hr" },
       { txt: "SLOVENIJA", val: "sl" }
     ];
   }

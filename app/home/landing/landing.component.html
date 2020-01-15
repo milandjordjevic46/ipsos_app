@@ -2,8 +2,8 @@
     <FlexboxLayout flexDirection="column" class="groupStyle_background" justifyContent="space-between"
         id="dnevniIzvestaj" style="height: 100%;">
 
-        <Label text="{{ 'dnevnik_kafa' | L: 'dnevnik_kafa' }}" (tap)="radiAnketu('multiPerDay')"
-            class="tekst_u_slici font_home" style="margin-top: 50"></Label>
+        <TextView text="{{ 'dnevnik_kafa' | L: 'dnevnik_kafa' }}" (tap)="radiAnketu('multiPerDay')"
+            class="tekst_u_slici font_home" style="margin-top: 50"></TextView>
 
         <Label text="{{ 'izvestaj_dana' | L: 'izvestaj_dana' }}" [nsRouterLink]="['/dialy_survey']"
             class="tekst_u_slici font_home"></Label>

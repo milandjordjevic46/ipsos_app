@@ -29,11 +29,12 @@ export class AppComponent implements OnInit {
         },
         onMessageReceivedCallback: (message: firebase.Message) => {
           console.log("[Firebase] onMessageReceivedCallback:", { message });
-          dialogs.alert({
-            title: message.title !== undefined ? message.title : "",
-            message: message.body,
-            okButtonText: "OK!"
-          });
+          if (message.body && message.body.length)
+            dialogs.alert({
+              title: message.title !== undefined ? message.title : "",
+              message: message.body,
+              okButtonText: "OK!"
+            });
           console.log("radi");
         }
       })

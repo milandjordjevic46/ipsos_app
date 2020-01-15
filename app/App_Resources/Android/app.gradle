@@ -11,6 +11,9 @@ android {
     generatedDensities = []
     applicationId = "org.nativescript.ipsosapp"
     multiDexEnabled true
+      versionCode = 2
+
+
     
     //override supported platforms
     // ndk {
@@ -18,7 +21,7 @@ android {
     //   		abiFilters "armeabi-v7a"
  		// }
   
-  }  
+  }
   aaptOptions {  
     additionalParameters "--no-version-vectors"  
   }  
