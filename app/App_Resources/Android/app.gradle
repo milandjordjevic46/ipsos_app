@@ -11,7 +11,7 @@ android {
     generatedDensities = []
     applicationId = "org.nativescript.ipsosapp"
     multiDexEnabled true
-      versionCode = 2
+      versionCode = 3
 
 
     
