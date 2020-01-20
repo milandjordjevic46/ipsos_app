@@ -27,7 +27,7 @@ export class DailySurveyComponent implements OnInit {
     private router: Router,
     private location: PlatformLocation
   ) {
-    page.actionBarHidden = true;
+    // page.actionBarHidden = true;
   }
 
   stylingButtons(item): any {
@@ -67,6 +67,7 @@ export class DailySurveyComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(appSettings.getString("token_tok"))
     // kad uradi anketu i ode na back vratice se i opet ce pozvati funckiju da uzme dane
     this.location.onPopState(() => {
       this.takeDays();
@@ -93,13 +94,22 @@ export class DailySurveyComponent implements OnInit {
 
   goToSurvey(param): any {
     let country = appSettings.getString("survey_lng");
+    let mail = appSettings.getString("emailIpsosApp");
     console.log("COUNTRYYYY", country);
     if (param.status !== "open" && param.status !== "started") {
-      return dialogs.alert({
-        title: "Oops!",
-        message: this.msgs[country],
-        okButtonText: "OK!"
-      });
+      if(appSettings.getString("emailIpsosApp") == 'test@ipsos.com') {
+        return dialogs.alert({
+          title: "Oops!",
+          message: this.msgs.en,
+          okButtonText: "OK!"
+        });
+      } else{
+        return dialogs.alert({
+          title: "Oops!",
+          message: this.msgs[country],
+          okButtonText: "OK!"
+        });
+      }
     }
     let dan = param.day * 1 + 1;
     let link =
@@ -111,6 +121,8 @@ export class DailySurveyComponent implements OnInit {
       dan +
       "&d";
     console.log(link);
+    if(mail == 'test@ipsos.com')
+      link+= '&smaraci';
     return this.router.navigate(["/survey", link]);
   }
 }

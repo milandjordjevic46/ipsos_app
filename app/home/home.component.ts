@@ -10,6 +10,6 @@ export class HomeComponent {
   title = "ipsos_app";
 
   constructor(private page: Page) {
-    page.actionBarHidden = true;
+    // page.actionBarHidden = true;
   }
 }

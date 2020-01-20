@@ -62,6 +62,7 @@ export class LandingComponent implements OnInit {
 
   radiAnketu(what: string) {
     let country = appSettings.getString("survey_lng");
+    let mail = appSettings.getString("emailIpsosApp");
     switch (what) {
       case "multiPerDay":
         let linkMulti =
@@ -69,6 +70,8 @@ export class LandingComponent implements OnInit {
           appSettings.getString("ispitanikid") +
           "&lng=" +
           appSettings.getString("survey_lng");
+          if(mail == 'test@ipsos.com')
+            linkMulti+= '&smaraci';
         this.router.navigate(["/survey", linkMulti]);
         break;
       case "quiz":
@@ -95,6 +98,8 @@ export class LandingComponent implements OnInit {
           day +
           "&d";
         day_niz.push(day);
+        if(mail == 'test@ipsos.com')
+          quiz+= '&smaraci';
         appSettings.setString("danD", JSON.stringify(day_niz));
         console.log("quiz", quiz);
         this.router.navigate(["/survey", quiz]);

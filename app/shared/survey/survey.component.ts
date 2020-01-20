@@ -1,8 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild } from "@angular/core";
 import * as appSettings from "application-settings";
 import { ActivatedRoute, Router } from "@angular/router";
-import { WebView, LoadEventData } from "ui/web-view";
+import { LoadEventData } from "ui/web-view";
 import { Page } from "tns-core-modules/ui/page/page";
+import { WebView } from "tns-core-modules/ui/web-view";
+
 
 @Component({
   selector: "app-survey",
@@ -18,7 +20,7 @@ export class SurveyComponent implements OnInit {
     private router: Router,
     private page: Page
   ) {
-    page.actionBarHidden = true;
+    // page.actionBarHidden = true;
     this.webViewSrc = this.route.snapshot.paramMap.get("surveyLink");
   }
 
